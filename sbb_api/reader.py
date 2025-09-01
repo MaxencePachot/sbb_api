@@ -1,5 +1,5 @@
 import json
-from .adls_connection import get_adls_client
+from adls_connection import get_adls_client
 
 def read_from_adls(path: str) -> dict:
     """Reads a JSON file from ADLS and returns a Python dictionary"""

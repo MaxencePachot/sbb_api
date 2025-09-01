@@ -9,7 +9,7 @@ def main():
     path = "data/output.json"
     upload_to_adls(path, data)
 
-    print_from_adls(path)
+    #print_from_adls(path)
 
 if __name__ == "__main__":
     main()

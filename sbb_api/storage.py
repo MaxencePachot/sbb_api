@@ -1,5 +1,5 @@
 import json
-from .adls_connection import get_adls_client
+from adls_connection import get_adls_client
 
 def upload_to_adls(path: str, data: dict, overwrite=True):
     """Upload a Python dictionary in JSON format to ADLS"""
