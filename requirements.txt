@@ -1,0 +1,3 @@
+requests
+azure-storage-file-datalake
+python-dotenv
