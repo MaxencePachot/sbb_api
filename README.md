@@ -18,8 +18,6 @@ This project collects and processes **SBB train data** for **Zug, Switzerland** 
    - Retrieve weather data (snow, rain, temperature, etc.).
    - Store JSON files securely in **Azure Data Lake Storage (ADLS)**.
 
-   
-
 2. **Databricks Pipeline**
    - Load data from ADLS into Databricks.
    - Apply **Bronze → Silver → Gold** architecture:
