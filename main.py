@@ -40,5 +40,6 @@ def main():
             print_csv_from_adls(csv_adls_folder, args.csv_file)
         else:
             print("Please specify the name of the CSV file to be read with --csv_file")
-if __name__ == "__main__":#P
+            
+if __name__ == "__main__":
     main()
