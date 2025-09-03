@@ -16,8 +16,8 @@ def main():
     args = parser.parse_args()
     
     # Parameters
-    sbb_url = "https://data.sbb.ch/api/explore/v2.1/catalog/datasets/ist-daten-sbb/records?limit=1"
-    json_path = "data/output.json"
+    sbb_url = "https://data.sbb.ch/api/explore/v2.1/catalog/datasets/ist-daten-sbb/records"
+    json_path = "data/sbb.json"
     csv_local_folder = "data"
     csv_adls_folder = "data"
 
