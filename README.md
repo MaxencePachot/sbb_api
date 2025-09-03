@@ -9,6 +9,8 @@
 
 This project collects and processes **SBB train data** for **Zug, Switzerland** along with **weather data**. The goal is to create a pipeline from **data ingestion to predictive modeling** using **Azure, ADLS, Databricks, PySpark, and MLflow**.
 
+![project_presentation](assets/project_presentation.png)
+
 ---
 
 ## Workflow

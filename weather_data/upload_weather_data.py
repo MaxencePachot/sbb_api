@@ -12,7 +12,7 @@ def upload_csv_folder_to_adls(local_folder: str, adls_folder: str):
         if filename.endswith(".csv"):
             local_path = os.path.join(local_folder, filename)
 
-            with open(local_path, "r", encoding="utf-8", errors="replace") as f:
+            with open(local_path, "r", encoding="latin1") as f:
                 content = f.read()
 
             adls_path = f"{adls_folder}/{filename}"

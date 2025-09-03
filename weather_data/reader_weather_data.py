@@ -11,7 +11,7 @@ def print_csv_from_adls(adls_folder: str, filename: str):
     file_client = fs_client.get_file_client(adls_path)
 
     download = file_client.download_file()
-    content = download.readall() # give a bytes file so we have to convert it after
+    content = download.readall() # Give a bytes file so we have to convert it after
 
     df = pd.read_csv(BytesIO(content), sep=";") # Convert in csv
     

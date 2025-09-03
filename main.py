@@ -10,14 +10,14 @@ def main():
     parser = argparse.ArgumentParser(description="Run retrieval of data steps")
     parser.add_argument("--upload_sbb", action="store_true", help="Upload SBB JSON data to ADLS")
     parser.add_argument("--upload_csv", action="store_true", help="Upload all CSV weather data to ADLS")
-    parser.add_argument("--read", action="store_true", help="Read JSON from ADLS")
+    parser.add_argument("--read_sbb_json", action="store_true", help="Read JSON from ADLS")
     parser.add_argument("--read_csv", action="store_true", help="Read a weather CSV from ADLS")
     parser.add_argument("--csv_file", type=str, help="Name of the CSV file to read")
     args = parser.parse_args()
     
     # Parameters
-    sbb_url = "https://data.sbb.ch/api/explore/v2.1/catalog/datasets/ist-daten-sbb/records?limit=1"
-    json_path = "data/output.json"
+    sbb_url = "https://data.sbb.ch/api/explore/v2.1/catalog/datasets/ist-daten-sbb/records"
+    json_path = "data/sbb.json"
     csv_local_folder = "data"
     csv_adls_folder = "data"
 
@@ -27,7 +27,7 @@ def main():
         upload_to_adls(json_path, data)
 
     # Read json from sbb data in adls
-    if args.read:
+    if args.read_sbb_json:
         print_from_adls(json_path)
 
     # Upload csv in adls
@@ -40,5 +40,6 @@ def main():
             print_csv_from_adls(csv_adls_folder, args.csv_file)
         else:
             print("Please specify the name of the CSV file to be read with --csv_file")
-if __name__ == "__main__":#P
+            
+if __name__ == "__main__":
     main()
