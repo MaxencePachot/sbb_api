@@ -10,7 +10,7 @@ def main():
     parser = argparse.ArgumentParser(description="Run retrieval of data steps")
     parser.add_argument("--upload_sbb", action="store_true", help="Upload SBB JSON data to ADLS")
     parser.add_argument("--upload_csv", action="store_true", help="Upload all CSV weather data to ADLS")
-    parser.add_argument("--read", action="store_true", help="Read JSON from ADLS")
+    parser.add_argument("--read_sbb_json", action="store_true", help="Read JSON from ADLS")
     parser.add_argument("--read_csv", action="store_true", help="Read a weather CSV from ADLS")
     parser.add_argument("--csv_file", type=str, help="Name of the CSV file to read")
     args = parser.parse_args()
@@ -27,7 +27,7 @@ def main():
         upload_to_adls(json_path, data)
 
     # Read json from sbb data in adls
-    if args.read:
+    if args.read_sbb_json:
         print_from_adls(json_path)
 
     # Upload csv in adls

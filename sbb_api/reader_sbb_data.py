@@ -11,7 +11,12 @@ def read_from_adls(path: str) -> dict:
     data = json.loads(file_contents)
     return data
 
-def print_from_adls(path: str):
+def print_from_adls(path: str, limit: int = 2):
     """Print the contents of the JSON file from ADLS"""
     data = read_from_adls(path)
-    print(json.dumps(data, indent=2))
+    
+    if isinstance(data, dict) and "results" in data and isinstance(data["results"], list):
+        if limit:
+            data = {**data, "results": data["results"][:limit]}
+            
+    print(json.dumps(data, indent=2, ensure_ascii=False))
