@@ -104,5 +104,5 @@ This project was developed within a **30-day Azure Free Trial window**. As a res
 ## 👤 Author
 
 Maxence Pachot
-[My site](https://pachotmaxence.com/)
-[Linkedin](https://www.linkedin.com/in/maxence-pachot-6801761b7/)
+-[My site](https://pachotmaxence.com/)
+-[Linkedin](https://www.linkedin.com/in/maxence-pachot-6801761b7/)
