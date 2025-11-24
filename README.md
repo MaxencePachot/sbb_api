@@ -45,7 +45,7 @@ This project was developed within a **30-day Azure Free Trial window**. As a res
 
 ### 1. Code Structure & Testing
 * **Current State:** Logic resides primarily in Databricks Notebooks (`.ipynb`) for interactive development.
-* **Production Target:** Core transformation logic would be extracted into **Python modules (`.py` / `src/`)** packaged as Wheels (`.whl`).
+* **Production Target:** Core transformation logic would be extracted into **Python modules (`.py` / `src/`)**.
     * *Why:* To enable **Unit Testing** (pytest) and proper **CI/CD** pipelines, keeping Notebooks only for orchestration and visualization.
 
 ### 2. Security & Secrets Management
