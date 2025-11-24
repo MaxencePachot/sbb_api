@@ -74,6 +74,7 @@ This project was developed within a **30-day Azure Free Trial window**. As a res
 ├── main.py                    # Local ingestion script entry point
 ├── requirements.txt           # Project dependencies
 └── README.md                  # Project documentation
+```
 
 ## 🚀 How to Run (Concept)
 
